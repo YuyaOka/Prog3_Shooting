@@ -6,6 +6,8 @@
 授業用の課題で作っているプログラムを置いています。
 Unityで作成しています。
 
+Issueリンク→https://github.com/YuyaOka/Prog3_Shooting/issues
+
 コミット状況
 <table border="0" cellspacing="0">
   <tbody>
