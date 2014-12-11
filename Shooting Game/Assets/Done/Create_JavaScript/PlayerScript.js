@@ -1,6 +1,6 @@
 #pragma strict
 
-  var Bolt : Transform ;
+var explosion : Transform ;
 
 function Update ()
 {
@@ -9,5 +9,11 @@ function Update ()
 
   transform.Translate(x * 0.17 , 0 , 0) ;
   transform.Translate(0 , 0 , y * 0.17) ;
+}
 
+function OnCollisionEnter()
+{
+  Destroy(gameObject) ;
+
+  Application.LoadLevel("GameOver") ;
 }

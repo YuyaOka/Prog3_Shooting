@@ -9,3 +9,8 @@ function Update ()
     Instantiate(Enemy , Vector3(Random.Range(19.5 , -19.5) , 0 ,13) , transform.rotation) ;
   }
 }
+
+function OnCollisonEnter()
+{
+  Application.LoadLevel("GameOver") ;
+}
