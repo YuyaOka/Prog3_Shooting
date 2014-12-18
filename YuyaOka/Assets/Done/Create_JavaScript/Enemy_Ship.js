@@ -2,11 +2,6 @@
 
 var Enemy : Transform ;
 
-function Start()
-{
-  Instantiate(Enemy , Vector3(35.5 , 0 ,13) , transform.rotation) ;
-}
-
 function Update ()
 {
   if(Time.frameCount % 100 == 0)
