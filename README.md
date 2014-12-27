@@ -35,8 +35,9 @@ Issueリンク→https://github.com/YuyaOka/Prog3_Shooting/issues
 	S:下
 	A:左
 	D:右
-
-	/:ショット			ボタン0:ショット
+	
+	カーソルキー移動化
+	/またはZ:ショット			ボタン0:ショット
 	Shift:スロー			LB:スロー
 
 			対応OS
