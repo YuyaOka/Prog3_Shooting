@@ -6,6 +6,13 @@ function Update () {
   {
     Destroy(gameObject) ;
   }
+}
 
 
+function OnCollisionEnter(col : Collision) {
+  if(col.gameObject.tag == "Enemy") {
+      Destroy(col.gameObject) ;
+  }
+
+  Destroy(gameObject) ;
 }

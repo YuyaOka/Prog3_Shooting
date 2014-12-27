@@ -14,6 +14,5 @@ function Update ()
 function OnCollisionEnter()
 {
   Destroy(gameObject) ;
-
   Application.LoadLevel("GameOver") ;
 }

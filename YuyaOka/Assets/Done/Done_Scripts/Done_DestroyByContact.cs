@@ -15,15 +15,15 @@ public class Done_DestroyByContact : MonoBehaviour
 		{
 			gameController = gameControllerObject.GetComponent <Done_GameController>();
 		}
-		if (gameController == null)
+/*		if (gameController == null)
 		{
 			Debug.Log ("Cannot find 'GameController' script");
-		}
+		}	*/
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Boundary" || other.tag == "Enemy")
+		if (other.tag == "Boundary" || other.tag == "Enemy" || other.tag == "Stone")
 		{
 			return;
 		}
@@ -38,8 +38,8 @@ public class Done_DestroyByContact : MonoBehaviour
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 			gameController.GameOver();
 		}
-		
-		gameController.AddScore(scoreValue);
+
+	//	gameController.AddScore(scoreValue);
 		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}
