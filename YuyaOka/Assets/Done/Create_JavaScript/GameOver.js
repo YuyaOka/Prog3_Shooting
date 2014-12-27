@@ -1,10 +1,5 @@
 #pragma strict
 
-function Update()
-{
-  
-}
-
 function OnGUI()
 {
   GUI.Label(Rect(Screen.width / 2 - 29 , Screen.height / 2 - 50 , 200 ,50) , "Game Over" ) ;

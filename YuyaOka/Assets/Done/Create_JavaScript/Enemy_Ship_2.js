@@ -1,16 +1,12 @@
 #pragma strict
 
 var Enemy : Transform ;
+var Ememy_Ship : Transform ;
 
 function Update ()
 {
   if(Time.frameCount % 120 == 0)
   {
-    Instantiate(Enemy , Vector3(Random.Range(19.5 , -19.5) , 0 ,13) , transform.rotation) ;
+    Instantiate(Enemy , Vector3(Random.Range(19.4 , -19.4) , 0 ,13) , transform.rotation) ;
   }
-}
-
-function OnCollisonEnter()
-{
-  Application.LoadLevel("GameOver") ;
 }

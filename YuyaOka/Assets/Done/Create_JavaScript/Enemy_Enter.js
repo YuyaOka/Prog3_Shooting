@@ -8,6 +8,4 @@ function Update () {
   {
     Destroy(gameObject) ;
   }
-
-
 }
