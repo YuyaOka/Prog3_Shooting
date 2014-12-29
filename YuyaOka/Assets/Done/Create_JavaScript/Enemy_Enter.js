@@ -10,12 +10,13 @@ function Update () {
   }
 }
 
-var cnt : int ;
-
-function OnCollisionEnter () {
-  cnt = cnt + 1 ;
-  if(cnt == 10)
+function OnCollisionEnter(col : Collision) {
+  if(col.gameObject.tag == "Bolt")
   {
     Destroy(gameObject) ;
+  }
+  if(col.gameObject.tag == "Player")
+  {
+    Application.LoadLevel("GameOver") ;
   }
 }

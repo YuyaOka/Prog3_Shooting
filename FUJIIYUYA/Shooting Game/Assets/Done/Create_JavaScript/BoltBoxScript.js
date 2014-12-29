@@ -5,9 +5,12 @@
 function Update ()
 {
 
-  if(Input.GetKey("joystick button 0") || Input.GetKey("/"))
+  if(Input.GetKey("joystick button 0") || Input.GetKey("/") || Input.GetKey("z") )
   {
-    Instantiate(Bolt , transform.position , transform.rotation) ;
+    if(Time.frameCount % 15 == 0)
+    {
+      Instantiate(Bolt , transform.position , transform.rotation) ;
+    }
   }
 
 }

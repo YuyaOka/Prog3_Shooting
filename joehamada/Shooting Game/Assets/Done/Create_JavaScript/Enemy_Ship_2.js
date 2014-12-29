@@ -6,6 +6,6 @@ function Update ()
 {
   if(Time.frameCount % 120 == 0)
   {
-    Instantiate(Enemy , Vector3(Random.Range(19.5 , -19.5) , 0 ,13) , transform.rotation) ;
+    Instantiate(Enemy , Vector3(Random.Range(19.4 , -19.4) , 0 ,13) , transform.rotation) ;
   }
 }

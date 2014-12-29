@@ -9,6 +9,15 @@ function Update () {
   {
     Destroy(gameObject) ;
   }
+}
 
-
+function OnCollisionEnter (col : Collision) {
+  if(col.gameObject.tag == "Bolt")
+  {
+    Destroy(gameObject) ;
+  }
+  if(col.gameObject.tag == "Player")
+  {
+    Application.LoadLevel("GameOver") ;
+  }
 }

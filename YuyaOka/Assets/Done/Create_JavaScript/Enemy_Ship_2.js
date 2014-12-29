@@ -1,7 +1,6 @@
 #pragma strict
 
 var Enemy : Transform ;
-var Ememy_Ship : Transform ;
 
 function Update ()
 {
