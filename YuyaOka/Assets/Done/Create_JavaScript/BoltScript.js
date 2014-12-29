@@ -10,9 +10,8 @@ function Update () {
 
 
 function OnCollisionEnter(col : Collision) {
-  if(col.gameObject.tag == "Enemy") {
+  if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Stone") {
       Destroy(col.gameObject) ;
+      Destroy(gameObject) ;
   }
-
-  Destroy(gameObject) ;
 }
