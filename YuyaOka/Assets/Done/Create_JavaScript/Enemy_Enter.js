@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+function Start () {
+  transform.rotation.y = -1.0 ;
+}
+
 function Update () {
 
   transform.position.z -= 0.15 ;
@@ -10,7 +14,7 @@ function Update () {
   }
 }
 
-function OnCollisionEnter(col : Collision) {
+/*function OnCollisionEnter(col : Collision) {
   if(col.gameObject.tag == "Bolt")
   {
     Destroy(gameObject) ;
@@ -20,3 +24,4 @@ function OnCollisionEnter(col : Collision) {
     Application.LoadLevel("GameOver") ;
   }
 }
+*/
