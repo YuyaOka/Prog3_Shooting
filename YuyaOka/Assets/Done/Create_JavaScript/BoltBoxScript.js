@@ -7,10 +7,9 @@ function Update ()
 
   if(Input.GetKey("joystick button 0") || Input.GetKey("/") || Input.GetKey("z") )
   {
-    if(Time.frameCount % 15 == 0)
+    if(Time.frameCount % 10 == 0)
     {
       Instantiate(Bolt , transform.position , transform.rotation) ;
     }
   }
-
 }

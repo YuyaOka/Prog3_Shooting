@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var explosion : Transform ;
+
 function Start () {
   transform.rotation.y = -1.0 ;
 }
@@ -14,14 +16,6 @@ function Update () {
   }
 }
 
-/*function OnCollisionEnter(col : Collision) {
-  if(col.gameObject.tag == "Bolt")
-  {
-    Destroy(gameObject) ;
-  }
-  if(col.gameObject.tag == "Player")
-  {
-    Application.LoadLevel("GameOver") ;
-  }
+function OnCollisionEnter () {
+  Instantiate(explosion , transform.position , transform.rotation) ;
 }
-*/

@@ -23,7 +23,8 @@ function Update ()
 }
 
 function OnCollisionEnter() {
-    //Destroy(gameObject) ;   // ゲームオーバーなのでいらない
-    Debug.Log("Hit!") ;
+    Destroy(gameObject) ;
+    Instantiate(explosion , transform.position , transform.rotation) ;
+
     Application.LoadLevel("GameOver") ;
 }
