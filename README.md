@@ -58,3 +58,5 @@ Issueリンク→https://github.com/YuyaOka/Prog3_Shooting/issues
 	Dropboxを使って配布しているので問題ありません。
 	Windows版ではアプリケーションの他に同梱フォルダがございます。
 	それとアプリケーションを同じディレクトリ内に置いてお遊びください。
+
+<img src="https://dl.dropboxusercontent.com/u/66352470/GitHub/PlaySetting.JPG">
