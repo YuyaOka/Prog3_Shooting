@@ -9,18 +9,10 @@ function Update () {
   }
 }
 
-/*var Counter : int = 0 ;
-
-function OnGUI() {
-Counter++ ;
-GUI.Label(Rect(-16.4 , -0.01 , 9.21 ,50) , "COUNT:" + Counter) ;
-}
-*/
-
-function OnCollisionEnter() {
-  //if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Stone") {
-    //  Destroy(col.gameObject) ;
-      Destroy(gameObject) ;
-  //    OnGUI() ;
-  //}
+function OnCollisionEnter(col : Collision) {
+  if(col.gameObject.CompareTag('Enemy') || col.gameObject.tag == "Stone")
+  {
+    Destroy(col.gameObject) ;
+    Destroy(gameObject) ;
+  }
 }

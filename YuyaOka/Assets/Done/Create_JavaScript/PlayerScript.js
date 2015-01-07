@@ -12,12 +12,12 @@ function Update ()
 
   /* 移動制限 */
   if (transform.position.x <= -18.16566 || transform.position.x >= 18.0684 ||
-    transform.position.z <= -13.10404 || transform.position.z >= 10.09297)
+    transform.position.z <= -15.10404 || transform.position.z >= 10.09297)
   {
     var xPos : float ;
     var zPos : float ;
     xPos = Mathf.Clamp(transform.position.x , -18.16566 , 18.0684) ;
-    zPos = Mathf.Clamp(transform.position.z , -13.10404 , 10.09297) ;
+    zPos = Mathf.Clamp(transform.position.z , -15.10404 , 10.09297) ;
     transform.position = Vector3(xPos , 0 , zPos) ;
   }
 }

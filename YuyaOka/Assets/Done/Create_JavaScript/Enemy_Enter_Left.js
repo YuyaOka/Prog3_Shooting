@@ -13,6 +13,11 @@ function Update () {
   }
 }
 
+var SE : AudioClip ;
+
 function OnCollisionEnter () {
   Instantiate(explosion , transform.position , transform.rotation) ;
+
+  AudioSource.PlayClipAtPoint(SE , transform.position) ;
+
 }

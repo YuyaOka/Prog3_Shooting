@@ -1,5 +1,7 @@
 #pragma strict
 
+var explosion : Transform ;
+
 function Update () {
 
   transform.position.x -= 0.1 ;
@@ -11,14 +13,10 @@ function Update () {
   }
 }
 
-function OnCollisionEnter (col : Collision)
-{
-  if(col.gameObject.tag == "Bolt")
-  {
-    Destroy(gameObject) ;
-  }
-  if(col.gameObject.tag == "Player")
-  {
-    Application.LoadLevel("GameOver") ;
-  }
+var SE : AudioClip ;
+
+function OnCollisionEnter () {
+  Instantiate(explosion , transform.position , transform.rotation) ;
+
+  AudioSource.PlayClipAtPoint(SE , transform.position) ;
 }
