@@ -22,8 +22,11 @@ function Update ()
   }
 }
 
+var SE : AudioClip ;
+
 function OnCollisionEnter() {
     Destroy(gameObject) ;
+    AudioSource.PlayClipAtPoint(SE , transform.position) ;
     Instantiate(explosion , transform.position , transform.rotation) ;
 
     Application.LoadLevel("GameOver") ;
