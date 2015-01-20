@@ -11,7 +11,9 @@ function OnGUI()
   {
     Application.Quit() ;
   }
+}
 
+function Update () {
   /* キーボードからの入力 */
   if(Input.GetKey("s"))
   {

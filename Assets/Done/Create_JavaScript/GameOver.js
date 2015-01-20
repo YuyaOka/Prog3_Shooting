@@ -2,25 +2,43 @@
 
 var customLabel : GUIStyle ;
 
+function Start() {
+  if(Score.Score > HighScore.High)
+  {
+    HighScore.High = Score.Score ;
+  }
+}
+
 function OnGUI()
 {
-  GUI.Label(Rect(Screen.width / 2 - 100 , Screen.height / 2 - 35 , 200 ,50) , "RESULT : " + Score.Score + "pt" , customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 - 100 , Screen.height / 2 - 70 , 200 ,50) , "RESULT : " + Score.Score + "pt" , customLabel) ;
 
-  if(GUI.Button(Rect(Screen.width / 2 - 100, Screen.height / 2 + 30 , 200, 50) , "Restart(R)") )
+  if(GUI.Button(Rect(Screen.width / 2 - 100, Screen.height / 2 , 200, 50) , "Restart(R)") )
   {
     Application.LoadLevel("Main") ;
-    Score.Score = 0 ;
   }
 
-  if(GUI.Button(Rect(Screen.width / 2 - 100, Screen.height / 2 + 90, 200, 50) , "Quit(Q)") )
+  if(GUI.Button(Rect(Screen.width / 2 - 100, Screen.height / 2 + 60, 200, 50) , "StartMemu(M)") )
+  {
+    Application.LoadLevel("StartMemu") ;
+  }
+
+  if(GUI.Button(Rect(Screen.width / 2 - 100, Screen.height / 2 + 120, 200, 50) , "Quit(Q)") )
   {
     Application.Quit() ;
   }
+}
 
+function Update() {
   /* キーボードからの入力 */
   if(Input.GetKey("r"))
   {
     Application.LoadLevel("Main") ;
+  }
+
+  if(Input.GetKey("m"))
+  {
+    Application.LoadLevel(0) ;
   }
 
   if(Input.GetKey("q"))
