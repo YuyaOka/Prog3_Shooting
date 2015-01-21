@@ -15,5 +15,5 @@ function Update () {
 }
 
 function OnGUI () {
-  GUI.Label(Rect(610 , 20 , 100 , 100) , "SCORE : " + Score + "pt", customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 + 200 , Screen.height / 2 - 350 , 100 , 100) , "SCORE : " + Score + "pt", customLabel) ;
 }

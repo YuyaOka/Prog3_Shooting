@@ -24,4 +24,9 @@ function Update () {
   {
     Application.Quit() ;
   }
+
+  if(Input.GetKey("joystick button 9"))
+  {
+    Application.LoadLevel("Main") ;
+  }
 }

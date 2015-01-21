@@ -11,7 +11,7 @@ function Update ()
   transform.Translate(0 , 0 , y * 0.15) ;
 
   /* 移動制限 */
-  if (transform.position.x <= -18.16566 || transform.position.x >= 18.0684 ||
+  if (transform.position.x <= -10.16566 || transform.position.x >= 10.0684 ||
     transform.position.z <= -15.10404 || transform.position.z >= 10.09297)
   {
     var xPos : float ;
