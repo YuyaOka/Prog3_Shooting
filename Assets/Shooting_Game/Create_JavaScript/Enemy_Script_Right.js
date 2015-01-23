@@ -16,10 +16,10 @@ function Update () {
 var SE : AudioClip ;
 
 function OnCollisionEnter (col:Collision) {
-  Instantiate(explosion , transform.position , transform.rotation) ;
   if((col.gameObject.CompareTag('Bolt'))
   {
+    Instantiate(explosion , transform.position , transform.rotation) ;
     Destroy(gameObject) ;
+    AudioSource.PlayClipAtPoint(SE , transform.position) ;
   }
-  AudioSource.PlayClipAtPoint(SE , transform.position) ;
 }
