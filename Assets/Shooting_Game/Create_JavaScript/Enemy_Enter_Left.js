@@ -17,7 +17,9 @@ var SE : AudioClip ;
 
 function OnCollisionEnter () {
   Instantiate(explosion , transform.position , transform.rotation) ;
-
+  if((col.gameObject.CompareTag('Bolt'))
+  {
+    Destroy(gameObject) ;
+  }
   AudioSource.PlayClipAtPoint(SE , transform.position) ;
-
 }
