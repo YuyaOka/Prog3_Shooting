@@ -15,7 +15,7 @@ function Update () {
 
 var SE : AudioClip ;
 
-function OnCollisionEnter () {
+function OnCollisionEnter (col : Collision) {
   if((col.gameObject.CompareTag('Bolt'))
   {
     Instantiate(explosion , transform.position , transform.rotation) ;
