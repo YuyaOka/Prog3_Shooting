@@ -12,7 +12,7 @@ function Update () {
 function OnCollisionEnter(col : Collision) {
   if(col.gameObject.CompareTag('Enemy') || col.gameObject.tag == "Stone")
   {
-    Destroy(col.gameObject) ;
+    //Destroy(col.gameObject) ;   // これをつけると1発当たるだけで破棄してしまう
     Destroy(gameObject) ;
   }
 }
