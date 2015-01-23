@@ -19,9 +19,13 @@ function Update () {
 
 var SE : AudioClip ;
 
-function OnCollisionEnter () {
-  Instantiate(explosion , transform.position , transform.rotation) ;
-  AudioSource.PlayClipAtPoint(SE , transform.position) ;
-  Score.Score = Score.Score + 20 ;
-  Counter.Count = Counter.Count + 1 ;
+function OnCollisionEnter (col : Collision) {
+  if((col.gameObject.CompareTag('Bolt'))
+  {
+    Destroy(gameObject) ;
+    Instantiate(explosion , transform.position , transform.rotation) ;
+    AudioSource.PlayClipAtPoint(SE , transform.position) ;
+    Score.Score = Score.Score + 20 ;
+    Counter.Count = Counter.Count + 1 ;
+  }
 }
