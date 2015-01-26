@@ -3,10 +3,6 @@
 static var Score : int = 0 ;
 var customLabel : GUIStyle ;
 
-function Start () {
-  Score = 0 ;
-}
-
 function Update () {
   if(Time.frameCount % 60 == 0)
   {

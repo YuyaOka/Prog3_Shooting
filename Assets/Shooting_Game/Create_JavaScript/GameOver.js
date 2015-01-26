@@ -11,7 +11,7 @@ function Start() {
 
 function OnGUI()
 {
-  GUI.Label(Rect(Screen.width / 2 - 100 , Screen.height / 2 - 70 , 200 , 50) , "RESULT\nSCORE : " + Score.Score + "pt  DESTROY : " + Counter.Count , customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 - 100 , Screen.height / 2 - 70 , 200 , 50) , "RESULT\nDESTROY : " + Counter.Count , customLabel) ;
 }
 
 function Update() {
@@ -31,6 +31,7 @@ function Update() {
     Application.Quit() ;
   }
 
+  /* ゲームパッドからの入力 */
   if(Input.GetKey("joystick button 8"))
   {
     Application.LoadLevel(0) ;

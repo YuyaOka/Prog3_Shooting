@@ -2,25 +2,19 @@
 
 var explosion : Transform ;
 
-function Start () {
-
-}
-
 function Update () {
-
   transform.position.z -= 0.15 ;
 
   if(transform.position.z < -14.5)
   {
     Destroy(gameObject) ;
   }
-
 }
 
 var SE : AudioClip ;
 
 function OnCollisionEnter (col : Collision) {
-  if((col.gameObject.CompareTag('Bolt'))
+  if(col.gameObject.CompareTag('Bolt'))
   {
     Destroy(gameObject) ;
     Instantiate(explosion , transform.position , transform.rotation) ;

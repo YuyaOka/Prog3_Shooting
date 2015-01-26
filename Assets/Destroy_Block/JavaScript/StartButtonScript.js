@@ -1,5 +1,11 @@
 ﻿#pragma strict
 
+var SE : AudioClip ;
+
+function Start () {
+	AudioSource.PlayClipAtPoint(SE , transform.position) ;
+}
+
 function Update() {
 	if(Input.GetKey(KeyCode.S))
 	{

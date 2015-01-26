@@ -8,11 +8,3 @@ function Update () {
     Destroy(gameObject) ;
   }
 }
-
-function OnCollisionEnter(col : Collision) {
-  if(col.gameObject.CompareTag('Player'))
-  {
-    Destroy(col.gameObject) ;
-    Destroy(gameObject) ;
-  }
-}

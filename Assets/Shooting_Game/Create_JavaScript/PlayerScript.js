@@ -1,6 +1,7 @@
 #pragma strict
 
 var explosion : Transform ;
+var customLabel : GUIStyle ;
 
 function Update ()
 {
@@ -23,11 +24,24 @@ function Update ()
 }
 
 var SE : AudioClip ;
+var hp : int ;
 
-function OnCollisionEnter() {
+function OnCollisionEnter(col:Collision) {
+  if(col.gameObject.CompareTag('Enemy') || col.gameObject.CompareTag('Stone'))
+  {
+    hp -= 1 ;
+  }
+
+  Instantiate(explosion , transform.position , transform.rotation) ;
+  if(hp == 0)
+  {
     Destroy(gameObject) ;
     AudioSource.PlayClipAtPoint(SE , transform.position) ;
     Instantiate(explosion , transform.position , transform.rotation) ;
-
     Application.LoadLevel("GameOver") ;
+  }
+}
+
+function OnGUI () {
+  GUI.Label(Rect(Screen.width / 2 + 270 , Screen.height / 2 + 300, 200 , 50) , "HP : " + hp , customLabel) ;
 }
