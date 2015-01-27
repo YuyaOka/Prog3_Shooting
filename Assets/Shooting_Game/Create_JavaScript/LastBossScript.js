@@ -1,7 +1,11 @@
 #pragma strict
 
 var hp : int = 50 ;
+var cnt : int = 0 ;
 var SE : AudioClip ;
+var fifteenattack : AudioClip ;
+var thirtyfortyattack : AudioClip ;
+var fiftyattack : AudioClip ;
 var explosion : Transform ;
 var move : float ;
 var customLabel : GUIStyle ;
@@ -21,6 +25,14 @@ function Update () {
     {
       transform.position.x += 8.0 ;
     }
+    if(transform.position.x <= -10.16566)
+    {
+      transform.position.x += 8.0 ;
+    }
+    if(transform.position.x >= 10.0684)
+    {
+      transform.position.x -= 8.0 ;
+    }
 
     /* Z軸間での移動 */
     if(move >= 2.0 && move < 2.5)
@@ -31,6 +43,15 @@ function Update () {
     {
       transform.position.z += 8.0 ;
     }
+    if(transform.position.z <= -15.10404)
+    {
+      transform.position.z += 8.0 ;
+    }
+    if(transform.position.z >= 10.09297)
+    {
+      transform.position.z -= 8.0 ;
+    }
+
   }
 
   /* 移動制限 */
@@ -49,11 +70,23 @@ function OnCollisionEnter(col : Collision) {
   hp -= 1 ;
   Instantiate(explosion , transform.position , transform.rotation) ;
 
+  cnt += 1 ;
+
+  if(cnt == 15)
+  {
+    AudioSource.PlayClipAtPoint(fifteenattack , transform.position) ;
+  }
+  if(cnt == 30 || cnt == 40)
+  {
+    AudioSource.PlayClipAtPoint(thirtyfortyattack , transform.position) ;
+  }
+
   if(hp == 0)
   {
     Destroy(gameObject) ;
     Instantiate(explosion , transform.position , transform.rotation) ;
     AudioSource.PlayClipAtPoint(SE , transform.position) ;
+    AudioSource.PlayClipAtPoint(fiftyattack , transform.position) ;
     Instantiate(HASAMA2 , Vector3(0 , 0 , 7.27) , transform.rotation) ;
     Counter.Count += 1 ;
   }

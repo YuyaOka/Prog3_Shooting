@@ -2,31 +2,26 @@
 
 var Map : AudioClip ;
 
-function map () {
-  Application.LoadLevel("Main") ;
-}
-
-function survival () {
-  Application.LoadLevel("Survival") ;
-}
-
 function Start () {
   Score.Score = 0 ;
   Counter.Count = 0 ;
+  Invoke("startSE" , 1.0) ;
+}
+
+function startSE () {
+  AudioSource.PlayClipAtPoint(Map , transform.position) ;
 }
 
 function Update () {
   /* キーボードからの入力 */
   if(Input.GetKey("m"))
   {
-    AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("map" , 3.5) ;
+    Application.LoadLevel("Main") ;
   }
 
   if(Input.GetKey("s"))
   {
-    AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("survival" , 3.5) ;
+    Application.LoadLevel("Survival") ;
   }
 
   if(Input.GetKey("t"))
@@ -39,24 +34,6 @@ function Update () {
     Application.LoadLevel("Credit") ;
   }
 
-  if(Input.GetKey("q"))
-  {
-    Application.Quit() ;
-  }
-
-  /* ゲームパッドからの入力 */
-  if(Input.GetKey("joystick button 9"))
-  {
-    AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("map" , 1) ;
-  }
-
-  if(Input.GetKey("joystick button 7 && joystick button 9"))  //RT + START
-  {
-    AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("survival" , 1) ;
-  }
-
   // 秘密機能で残しておこう
   if(Input.GetKey("g"))
   {
@@ -65,6 +42,23 @@ function Update () {
 
   if(Input.GetKey("d"))
   {
-    Application.LoadLevel(5) ;
+    Application.LoadLevel("TopMemu") ;
   }
+
+  if(Input.GetKey("q"))
+  {
+    Application.Quit() ;
+  }
+
+  /* ゲームパッドからの入力 */
+  if(Input.GetKey("joystick button 9"))   //Start
+  {
+    Application.LoadLevel("Main") ;
+  }
+
+  if(Input.GetKey("joystick button 8"))  // Back
+  {
+    Application.LoadLevel("Survival") ;
+  }
+
 }

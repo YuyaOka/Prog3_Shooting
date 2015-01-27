@@ -1,5 +1,11 @@
 #pragma strict
 
+var clear : AudioClip ;
+
+function Start () {
+  AudioSource.PlayClipAtPoint(clear , transform.position) ;
+}
+
 function Update () {
 
   /* キーボード入力 */

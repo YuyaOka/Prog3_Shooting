@@ -5,9 +5,9 @@ var customLabel : GUIStyle ;
 
 function Update () {
   /* 中ボス */
-  if(Counter.Count == 20)
+  if(Counter.Count == 1)
   {
-    if(Application.loadedLevelName != "PreBoss")
+    if(Application.loadedLevelName != "PreBoss" && Application.loadedLevelName != "Survival")
     {
       Application.LoadLevel("PreBossEnter") ;
     }
@@ -16,7 +16,7 @@ function Update () {
   /* ラスボス */
   if(Counter.Count == 50)
   {
-    if(Application.loadedLevelName != "LastBoss")
+    if(Application.loadedLevelName != "LastBoss" && Application.loadedLevelName != "Survival")
     {
       Application.LoadLevel("LastBossEnter") ;
     }

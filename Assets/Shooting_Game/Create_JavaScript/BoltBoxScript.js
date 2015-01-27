@@ -10,7 +10,7 @@ function Update ()
     if(Time.frameCount % 10 == 0)
     {
       Instantiate(Bolt , transform.position , transform.rotation) ;
-      AudioSource.PlayClipAtPoint(SE , transform.position) ;
+      //AudioSource.PlayClipAtPoint(SE , transform.position) ;
     }
   }
 }

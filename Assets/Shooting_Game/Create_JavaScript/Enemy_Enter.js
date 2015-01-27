@@ -14,18 +14,18 @@ function Update () {
 var SE : AudioClip ;
 
 function OnCollisionEnter (col : Collision) {
-  if(col.gameObject.CompareTag('Bolt'))
+  if(col.gameObject.CompareTag("Bolt"))
   {
     Destroy(gameObject) ;
     Instantiate(explosion , transform.position , transform.rotation) ;
     AudioSource.PlayClipAtPoint(SE , transform.position) ;
-    Score.Score = Score.Score + 20 ;
+    Score.Score += 20 ;
 
-    if(Application.loadedLevelName == "Main")
+    if(Application.loadedLevelName == "Main" && Application.loadedLevelName != "Survival")
     {
       Counter.Count += 1 ;
     }
-    if(Application.loadedLevelName == "Survival")
+    if(Application.loadedLevelName == "Survival" && Application.loadedLevelName != "Main")
     {
       Survival_Counter.Count += 1 ;
     }

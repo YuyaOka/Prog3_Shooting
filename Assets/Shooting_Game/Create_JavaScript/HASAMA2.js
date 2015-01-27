@@ -1,7 +1,11 @@
 #pragma strict
 
 var hp : int = 100 ;
+var cnt : int = 0 ;
 var SE : AudioClip ;
+var thirtyattack : AudioClip ;
+var sixtyattack : AudioClip ;
+var hundredattack : AudioClip ;
 var explosion : Transform ;
 var move : float ;
 var customLabel : GUIStyle ;
@@ -47,6 +51,17 @@ function Update () {
 function OnCollisionEnter(col : Collision) {
   hp -= 1 ;
   Instantiate(explosion , transform.position , transform.rotation) ;
+
+  cnt += 1 ;
+
+  if(cnt == 30)
+  {
+    AudioSource.PlayClipAtPoint(thirtyattack , transform.position) ;
+  }
+  if(cnt == 60)
+  {
+    AudioSource.PlayClipAtPoint(sixtyattack , transform.position) ;
+  }
 
   if(hp == 0)
   {

@@ -1,9 +1,12 @@
 #pragma strict
 
+var SE : AudioClip ;
+
 function hoge () {
   Application.LoadLevel(15) ;   //LastBoss
 }
 
 function Start () {
-  Invoke("hoge" , 2.0) ;
+  AudioSource.PlayClipAtPoint(SE , transform.position) ;
+  Invoke("hoge" , 9.0) ;
 }

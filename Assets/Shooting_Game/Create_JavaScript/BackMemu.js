@@ -5,6 +5,10 @@ function Update () {
   {
     Application.LoadLevel(0) ;
   }
+  if(Input.GetKey("n"))
+  {
+    Application.LoadLevel("ObjectIntroduce") ;
+  }
 
   if(Input.GetKey("joystick button 8"))
   {

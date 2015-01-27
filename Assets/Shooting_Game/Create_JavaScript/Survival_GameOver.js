@@ -1,26 +1,29 @@
 #pragma strict
 
 var customLabel : GUIStyle ;
-var SE : AudioClip ;
+var highscoreSE : AudioClip ;
 
 function Start() {
   if(Score.Score > HighScore.High)
   {
     HighScore.High = Score.Score ;
-    AudioSource.PlayClipAtPoint(SE , transform.position) ;
+    AudioSource.PlayClipAtPoint(highscoreSE , transform.position) ;
   }
 }
 
 function OnGUI()
 {
-  GUI.Label(Rect(Screen.width / 2 - 250 , Screen.height / 2 , 200 , 50) , "RESULT\nDESTROY : " + Counter.Count , customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 - 250 , Screen.height / 2 , 200 , 50) , "RESULT\nSCORE : " + Score.Score + "pt  DESTROY : " + Survival_Counter.Count , customLabel) ;
 }
+
+var restart : AudioClip ;
 
 function Update() {
   /* キーボードからの入力 */
   if(Input.GetKey("r"))
   {
-    Application.LoadLevel(17) ;
+    AudioSource.PlayClipAtPoint(restart , transform.position) ;
+    Invoke("survival" , 3.5) ;
   }
 
   if(Input.GetKey("b"))
@@ -43,4 +46,8 @@ function Update() {
   {
     Application.LoadLevel(17) ;
   }
+}
+
+function survival () {
+  Application.LoadLevel(17) ;
 }

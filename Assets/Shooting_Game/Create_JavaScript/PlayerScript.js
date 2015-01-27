@@ -25,7 +25,7 @@ function Update ()
 
 var SE : AudioClip ;
 var Health : AudioClip ;
-var hp : int ;
+var hp : int = 15 ;
 
 function OnCollisionEnter(col:Collision) {
   if(col.gameObject.CompareTag('Enemy') || col.gameObject.CompareTag('Stone'))
@@ -43,10 +43,20 @@ function OnCollisionEnter(col:Collision) {
 
   if(hp == 0)
   {
-    Destroy(gameObject) ;
-    AudioSource.PlayClipAtPoint(SE , transform.position) ;
-    Instantiate(explosion , transform.position , transform.rotation) ;
-    Application.LoadLevel("GameOver") ;
+    if(Application.loadedLevelName == "Main" || Application.loadedLevelName == "PreBoss" || Application.loadedLevelName == "LastBoss")
+    {
+      Destroy(gameObject) ;
+      AudioSource.PlayClipAtPoint(SE , transform.position) ;
+      Instantiate(explosion , transform.position , transform.rotation) ;
+      Application.LoadLevel("GameOver") ;
+    }
+    if(Application.loadedLevelName == "Survival")
+    {
+      Destroy(gameObject) ;
+      AudioSource.PlayClipAtPoint(SE , transform.position) ;
+      Instantiate(explosion , transform.position , transform.rotation) ;
+      Application.LoadLevel("Survival_GameOver") ;
+    }
   }
 }
 

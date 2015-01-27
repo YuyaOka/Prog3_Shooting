@@ -11,7 +11,7 @@ function Update () {
 }
 
 function OnGUI () {
-  if(Application.loadedLevelName == "Main")
+  if(Application.loadedLevelName == "Survival")
   {
     GUI.Label(Rect(Screen.width / 2 + 300 , Screen.height / 2 - 350 , 100 , 100) , "SCORE : " + Score + "pt", customLabel) ;
   }
