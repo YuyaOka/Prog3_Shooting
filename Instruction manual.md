@@ -1,15 +1,15 @@
-# Seminar in Management Information Ⅱ
+# Seminar in Management Information 竇｡
 =========================
 
-## Team name：オヤカタン
-## Member：Yuya Oka，Joichiro Hamada，Yuya Fujii
+## Team name : 繧ｪ繝､繧ｫ繧ｿ繝ｳ
+## Member : Yuya Oka , Joichiro Hamada , Yuya Fujii
 
 =========================
 
 ## Description
- - https://github.com/YuyaOka/Prog_Shooting
+ - **https://github.com/YuyaOka/Prog_Shooting**
  - Use programing language is JavaScript and C#
- - Create using software is Unity(http://japan.unity3d.com/)
+ - Create using software is Unity(**http://japan.unity3d.com/**)
 
 We're prepared the two modes
  - Survival mode
@@ -32,12 +32,12 @@ We're prepared the two modes
  - Mac OSX 10.9 later
 
 ## Operatin instructions
- 	   |	    Gamepad         |               Keyboard
----------------------------------------------------------------------------
-  Moving   |    Left analog stick   | Cursor or key "W" , "A" , "S" or "D"
-  Launch   |           X	    |	         Key "Z" or "/"
-  Start	   |      Start button	    |	             Key "S"
- Remarks   | Using Direct InputMode |
+||Gamepad|Keyboard|
+|:-:|:-:|:-:|
+|Moving|Left analog stick|Cursor or key "W" , "A" , "S" or "D"
+|Launch|X|Key "Z" or "/"|
+|Start|Start button|Key "S"|
+|Remarks|Using Direct InputMode |-|
 
 ## Secret code
  - Game changes to Breakout When you press the key "D" at the start screen.
@@ -49,3 +49,4 @@ We're prepared the two modes
  - Assets : Space Warrior Jet by Ozgur Saral http://u3d.as/9DS
 	    Space Shooter by Unity Technologies http://u3d.as/66k
 	    Rocks Pack - Freebies by Nobiax / Yughues http://u3d.as/64P
+ - Special Thanks : Masayoshi Hasama
