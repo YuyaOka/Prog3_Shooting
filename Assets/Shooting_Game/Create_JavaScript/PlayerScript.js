@@ -24,15 +24,23 @@ function Update ()
 }
 
 var SE : AudioClip ;
+var Health : AudioClip ;
 var hp : int ;
 
 function OnCollisionEnter(col:Collision) {
   if(col.gameObject.CompareTag('Enemy') || col.gameObject.CompareTag('Stone'))
   {
     hp -= 1 ;
+    Instantiate(explosion , transform.position , transform.rotation) ;
   }
 
-  Instantiate(explosion , transform.position , transform.rotation) ;
+  if(col.gameObject.CompareTag('Health'))
+  {
+    hp += 2 ;
+    Destroy(col.gameObject) ;
+    AudioSource.PlayClipAtPoint(Health , transform.position) ;
+  }
+
   if(hp == 0)
   {
     Destroy(gameObject) ;

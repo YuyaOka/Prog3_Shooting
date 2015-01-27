@@ -20,13 +20,13 @@ function Update () {
   if(Input.GetKey("m"))
   {
     AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("map" , 1) ;
+    Invoke("map" , 3.5) ;
   }
 
   if(Input.GetKey("s"))
   {
     AudioSource.PlayClipAtPoint(Map , transform.position) ;
-    Invoke("survival" , 1) ;
+    Invoke("survival" , 3.5) ;
   }
 
   if(Input.GetKey("t"))
