@@ -19,6 +19,7 @@ function Update() {
   if(Input.GetKey("r"))
   {
     Application.LoadLevel("Main") ;
+    Counter.Count = 0 ;
   }
 
   if(Input.GetKey("b"))
@@ -40,5 +41,6 @@ function Update() {
   if(Input.GetKey("joystick button 9"))
   {
     Application.LoadLevel("Main") ;
+    Counter.Count = 0 ;
   }
 }
