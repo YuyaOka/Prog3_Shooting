@@ -13,7 +13,7 @@ function Start() {
 
 function OnGUI()
 {
-  GUI.Label(Rect(Screen.width / 2 - 250 , Screen.height / 2 , 200 , 50) , "RESULT\nSCORE : " + Score.Score + "pt  DESTROY : " + Counter.Count , customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 - 250 , Screen.height / 2 , 200 , 50) , "RESULT\nDESTROY : " + Counter.Count , customLabel) ;
 }
 
 function Update() {
