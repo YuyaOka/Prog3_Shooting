@@ -55,6 +55,7 @@ function OnCollisionEnter(col : Collision) {
     Instantiate(explosion , transform.position , transform.rotation) ;
     AudioSource.PlayClipAtPoint(SE , transform.position) ;
     Instantiate(HASAMA2 , Vector3(0 , 0 , 7.27) , transform.rotation) ;
+    Counter.Count += 1 ;
   }
 }
 

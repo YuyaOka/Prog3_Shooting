@@ -24,5 +24,5 @@ function Update () {
 }
 
 function OnGUI () {
-  GUI.Label(Rect(Screen.width / 2 + 300 , Screen.height / 2 - 300 , 100 , 100) , "COUNT : " + Count + "50" , customLabel) ;
+  GUI.Label(Rect(Screen.width / 2 + 300 , Screen.height / 2 - 300 , 100 , 100) , "COUNT : " + Count , customLabel) ;
 }
