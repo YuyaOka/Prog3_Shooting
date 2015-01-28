@@ -20,7 +20,7 @@ We're prepared the two modes
 ## Requirement
 ### HDD
  - Windows : 200MB (100MB)
- - Mac : 260MB (130MB)
+ - Mac : 260MB (130MB)<br>
  If you have both save the zip file and the game files.
  The capacity of parentheses game file.
 
