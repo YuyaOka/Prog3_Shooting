@@ -24,7 +24,14 @@ function Update () {
     {
       transform.position.x += 8.0 ;
     }
-
+    if(transform.position.x <= -10.16566)
+    {
+      transform.position.x += 8.0 ;
+    }
+    if(transform.position.x >= 10.0684)
+    {
+      transform.position.x -= 8.0 ;
+    }
     /* Z軸間での移動 */
     if(move >= 2.0 && move < 2.5)
     {
@@ -33,6 +40,14 @@ function Update () {
     if(move >= 2.5 && move < 3.0)
     {
       transform.position.z += 8.0 ;
+    }
+    if(transform.position.z <= -15.10404)
+    {
+      transform.position.z += 8.0 ;
+    }
+    if(transform.position.z >= 10.09297)
+    {
+      transform.position.z -= 8.0 ;
     }
   }
 
