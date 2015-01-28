@@ -7,7 +7,14 @@ function Update () {
   }
   if(Input.GetKey("n"))
   {
-    Application.LoadLevel("ObjectIntroduce") ;
+    if(Application.loadedLevelName == "Introduce")
+    {
+      Application.LoadLevel("ObjectIntroduce") ;
+    }
+    if(Application.loadedLevelName == "Credit")
+    {
+      Application.LoadLevel("Asset_Links") ;
+    }
   }
 
   if(Input.GetKey("joystick button 8"))
