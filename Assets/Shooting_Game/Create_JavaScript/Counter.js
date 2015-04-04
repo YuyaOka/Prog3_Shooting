@@ -5,7 +5,7 @@ var customLabel : GUIStyle ;
 
 function Update () {
   /* 中ボス */
-  if(Counter.Count == 20)
+  if(Counter.Count == 10)
   {
     if(Application.loadedLevelName != "PreBoss" && Application.loadedLevelName != "Survival")
     {
@@ -14,7 +14,7 @@ function Update () {
   }
 
   /* ラスボス */
-  if(Counter.Count == 50)
+  if(Counter.Count == 20)
   {
     if(Application.loadedLevelName != "LastBoss" && Application.loadedLevelName != "Survival")
     {
