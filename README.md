@@ -3,8 +3,8 @@
 ##Description
 **[nnsndnb/Prog_Shooting](https://github.com/nnsnodnb/Prog_Shooting)**
  - Use programing language is **JavaScript** and **C#**
- - Created using software is **[Unity](http://japan.unity3d.com/ "Unity - Game Engin")**
-![Demo1](https://github.com/nnsndnb/Prog_Shooting/blob/master/Assets/Images/demo1.PNG)
+ - Created using software is **[Unity](http://japan.unity3d.com/ "Unity - Game Engin")**  
+![Demo1](https://github.com/nnsnodnb/Prog_Shooting/blob/master/Assets/Images/demo1.PNG)
 
 ##Requirement
 To build using Unity this project.
