@@ -6,10 +6,12 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
+._.*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -67,6 +69,7 @@ $RECYCLE.BIN/
 
 # Unity3D generated meta files
 *.pidb.meta
+*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
