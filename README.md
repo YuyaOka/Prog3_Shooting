@@ -14,7 +14,7 @@ Open Unity -> File -> Open Project Choose this project file.<br />
 **You should choose the folder where the asset.**
 
 ##Licence
-Copyright &copy; 2015 **[nnsndnb](https://github.com/nnsnodnb)**
+This software is released under the MIT License, see [LICENSE](https://github.com/nnsnodnb/Prog_Shooting/blob/master/LICENCE)
 
 ##Author
 **[nnsnodnb](https://github.com/nnsnodnb)**
