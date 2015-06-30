@@ -7,7 +7,7 @@
 =========================
 
 ## Description
- - **https://github.com/YuyaOka/Prog_Shooting**
+ - **https://github.com/nnsnodnb/Prog_Shooting**
  - Use programing language is JavaScript and C#
  - Create using software is Unity(**http://japan.unity3d.com/**)
 
